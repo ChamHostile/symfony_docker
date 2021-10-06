@@ -1,11 +1,10 @@
-version: '3.7'
+version: '3.8'
 services:
   # initializing db with credential provided by .env file
   db:
     image: mysql:8.0
     container_name: db_docker_symfony
-    restart: always
-    volumes: 
+    volumes:
       - ./db-data:/var/lib/mysql
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
@@ -38,5 +37,5 @@ services:
 
 #giving reference to volumes for services
 volumes: 
-  db-data:
   php:
+  db-data:

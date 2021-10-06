@@ -14,5 +14,10 @@ return [
     '_profiler_router' => [['token'], ['_controller' => 'web_profiler.controller.router::panelAction'], [], [['text', '/router'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
+    'posts_index' => [[], ['_controller' => 'App\\Controller\\PostsController::index'], [], [['text', '/posts/']], [], []],
+    'posts_new' => [[], ['_controller' => 'App\\Controller\\PostsController::new'], [], [['text', '/posts/new']], [], []],
+    'posts_show' => [['id'], ['_controller' => 'App\\Controller\\PostsController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/posts']], [], []],
+    'posts_edit' => [['id'], ['_controller' => 'App\\Controller\\PostsController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/posts']], [], []],
+    'posts_delete' => [['id'], ['_controller' => 'App\\Controller\\PostsController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/posts']], [], []],
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], []],
 ];
